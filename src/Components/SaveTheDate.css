@@ -1,0 +1,256 @@
+:root {
+    --purple: #615087;
+    --peach: #ffd5cd;
+    --pink: #efbbcf;
+    --lilac: #c3aed6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* font-family: 'Great Vibes', cursive;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Parisienne', cursive; */
+
+h2 {
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    font-size: 5rem;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+img {
+}
+
+label {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.container {
+    width: 80%;
+
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "rsvp wedding";
+    font-family: "Noto Sans", sans-serif;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.rsvp {
+    grid-area: rsvp;
+
+    /* border: 3px solid blue; */
+    position: relative;
+}
+
+.rsvp img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: auto;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); */
+}
+
+.wedding {
+    grid-area: wedding;
+    border-left-style: solid;
+    border-left-color: black;
+    position: relative;
+}
+
+.form-alignment {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.alignment-options {
+    /* border: 3px solid brown; */
+    text-align: center;
+}
+.left-alignment {
+    /* border: 3px solid purple; */
+    display: inline-block;
+    text-align: left;
+    margin: 2rem;
+}
+
+.left-alignment label {
+    padding-left: 1rem;
+}
+
+hr {
+    margin: 0 auto;
+    border-top: 2px solid black;
+    width: 95%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* .heart {
+    position: absolute;
+    top: 37%;
+    left: 30%;
+    background: var(--peach);
+    height: 40%;
+    width: 40%;
+    transform: rotate(-45deg);
+}
+
+.shape-container {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    color: white;
+    border: 1px solid;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: var(--peach);
+    border-radius: 50%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.heart:before {
+    left: 0;
+    top: -50%;
+}
+
+.heart:after {
+    left: 50%;
+} */
+
+.checkbox-container {
+    /* height: 40vh;
+    width: 20vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    position: relative;
+    outline: none;
+    transform: rotate(45deg);
+    -webkit-appearance: none;
+}
+
+input[type="checkbox"]:before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    height: 60%;
+    width: 100%;
+    top: -59%;
+    border-radius: 75px 75px 0 0;
+}
+
+input[type="checkbox"]:after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    height: 60%;
+    width: 100%;
+    transform: rotate(-90deg);
+    border-radius: 75px 75px 0 0;
+    top: 20%;
+    right: 79%;
+}
+
+input[type="checkbox"]:checked,
+input:checked[type="checkbox"]:before,
+input:checked[type="checkbox"]:after {
+    background-color: #fe0f42;
+}
+
+input[type="submit"] {
+    margin-top: 1rem;
+    /* display: block; */
+    padding: 6px 30px;
+    font-family: "Great Vibes", cursive;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        background: white;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        grid-template-rows: 2fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "rsvp"
+            "wedding";
+        font-family: "Noto Sans", sans-serif;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .rsvp {
+        grid-area: rsvp;
+
+        /* border: 3px solid blue; */
+        position: relative;
+    }
+
+    .wedding {
+        grid-area: wedding;
+        border-left-style: none;
+        border-left-color: black;
+        position: relative;
+    }
+
+    .form-alignment {
+        position: relative;
+        left: 50%;
+    }
+}
